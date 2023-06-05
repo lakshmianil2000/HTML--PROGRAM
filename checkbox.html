@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style ="color:indigo ">Create a Checkbox and get its value</h2>
+    <h3>Are you a web developer?</h3>
+    <input type="checkbox" id="mycheck1" value="yes, I am a web Developer">
+    <label for ="mycheck1"> yes</label><br>
+    <input type="checkbox" id=  value="no, I am a web Developer">
+    <label for ="mycheck2"> no</label><br>
+    <br>
+    <br>
+    <button onclick="checkCheckbox()">Submit</button><br>
+
+    <h4 style="color:darkslateblue" id="result"></h4>
+   <script>
+    function checkCheckbox(){
+        var yes = document.getElementById("mycheck1");
+        var no =document.getElementById("mycheck2");
+        if(yes.checked == true && no.checked == true){
+            return document.getElementById("error").innerHTML = "please mark only one "
+        }
+        else if (yes.checked ==true)
+        {
+         var y = document.getElementById("mycheck1").value;
+         return document.getElementById("result").innerHTML = y;
+        }
+        else if (no.checked ==true)
+        {
+         var n = document.getElementById("mycheck2").value;
+         return document.getElementById("result").innerHTML = n;
+        }
+    }
+</script>
+</body>
+</html>
